@@ -1,0 +1,118 @@
+# ── Environment secrets ──────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+venv*/
+env/
+ENV/
+virtualenv/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+wheels/
+*.egg
+
+# ── Package manager / installer caches ───────────────────────────────────────
+# pip download & build caches
+.pip/
+.cache/pip/
+pip-cache/
+# uv cache
+.uv/
+uv-cache/
+# Poetry / PDM / Hatch / Pipenv
+.pdm-python/
+.pdm-build/
+.hatch/
+.pipenv/
+# mypy / pyright / ruff / black caches
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.cache/
+# Jupyter
+.ipynb_checkpoints/
+
+# ── Testing / coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.tox/
+.nox/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+coverage.json
+nosetests.xml
+.cache/cover/
+
+# ── Compiled / optimized ─────────────────────────────────────────────────────
+*.pyd
+*.dylib
+cython_debug/
+MANIFEST
+
+# ── Database / serialised state ──────────────────────────────────────────────
+*.sqlite3
+*.db
+*.rdb
+dump.rdb
+
+# ── Runtime output (generated on every run) ──────────────────────────────────
+# Pipeline stage outputs: economist_briefing_*, researcher_daily_*, etc.
+research/*
+!research/README.md
+
+# Scraper output (one file per run, ~200 KB each)
+yahoo_finance_articles_*.json
+
+# Paper-trading ledger — personal portfolio state, not shared
+trader/data/portfolio.json
+trader/data/*.tmp
+
+# Logs and cron lock files
+*.log
+logs/
+.pipeline-cron.lock
+.monitor-cron.lock
+
+# ── IDE / editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Agent / assistant local config ───────────────────────────────────────────
+.claude/
+
+# ── Obscura local checkout (if built inside the project) ─────────────────────
+obscura/
+obscura/target/
+
+# ── Legacy / superseded files kept locally only ───────────────────────────────
+# Internal build log and previous versions of the spec / agent runner, replaced
+# by README.md, PLAN.md and agents/runner.py. Local reference only.
+implementation_summary.md
+*_old.py
+*_old.md
+*.bak
+*.orig
+*~
+*#

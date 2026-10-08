@@ -1,0 +1,22 @@
+{
+  "economist": {
+    "model": "perplexity/sonar",
+    "provider": "perplexity"
+  },
+  "researcher": {
+    "model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "deepinfra"
+  },
+  "analyst": {
+    "model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "deepinfra"
+  },
+  "associates": {
+    "model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "deepinfra"
+  },
+  "manager": {
+    "model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "deepinfra"
+  }
+}

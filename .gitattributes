@@ -1,0 +1,40 @@
+# AutoFund — line ending normalisation
+# Files are stored with LF in the repository and checked out using the
+# platform-native convention, so Windows/macOS/Linux contributors don't
+# produce whole-file diffs from CRLF/LF churn.
+
+* text=auto
+
+# Force LF for everything that executes on Linux / Raspberry Pi. The cron
+# entries and the scripts they invoke must stay LF or the shell fails.
+*.py       text eol=lf
+*.sh       text eol=lf
+*.bash     text eol=lf
+*.crontab  text eol=lf
+
+# Documentation and data — keep one canonical form to avoid noisy diffs.
+*.md       text eol=lf
+*.txt      text eol=lf
+*.json     text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.toml     text eol=lf
+*.cfg      text eol=lf
+*.ini      text eol=lf
+
+# Windows-native formats
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+# Never rewrite these as text
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.pdf      binary
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.eot      binary

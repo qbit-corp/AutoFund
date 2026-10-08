@@ -1,0 +1,29 @@
+# AutoFund — cron schedule template
+# -------------------------------------
+# TEMPLATE: replace every occurrence of YOUR_USER with your own account name
+# before installing. Paths must be absolute because cron runs with an isolated
+# environment.
+#
+# Install:
+#   crontab -l > ~/crontab-before-autofund.txt     # back up existing jobs
+#   crontab ~/AutoFund/autofund.crontab
+#
+# The schedule times below use the server's Europe/Rome timezone. Adjust them
+# (or set CRON_TZ) to suit your location.
+#
+# The scraper needs the Obscura binary. Cron does not read your shell profile,
+# so make sure `obscura` is on the PATH below, or set OBSCURA_BIN in .env
+# (see the "Browser Engine" section of README.md).
+
+SHELL=/bin/sh
+HOME=/home/YOUR_USER
+PATH=/home/YOUR_USER/AutoFund/venv/bin:/home/YOUR_USER/.local/bin:/usr/local/bin:/usr/bin:/bin
+PYTHONUNBUFFERED=1
+PYTHONIOENCODING=utf-8
+
+# Daily at 16:30 Rome time; runner.py skips NYSE holidays and weekends.
+30 16 * * * cd /home/YOUR_USER/AutoFund && /usr/bin/flock -n /home/YOUR_USER/AutoFund/.pipeline-cron.lock /home/YOUR_USER/AutoFund/venv/bin/python /home/YOUR_USER/AutoFund/runner.py --cron >> /home/YOUR_USER/AutoFund/pipeline.log 2>&1
+
+# Hourly from 15:30 through 21:30 Europe/Rome.
+# monitor.py --cron skips closed sessions (holidays, early closes, outside hours).
+30 15-21 * * 1-5 cd /home/YOUR_USER/AutoFund && /usr/bin/flock -n /home/YOUR_USER/AutoFund/.monitor-cron.lock /home/YOUR_USER/AutoFund/venv/bin/python /home/YOUR_USER/AutoFund/monitor.py --cron >> /home/YOUR_USER/AutoFund/monitor.log 2>&1
