@@ -511,7 +511,7 @@ Trades only execute during live market hours for the relevant exchange (NYSE, LS
 **No.** AutoFund is a paper trading system. It uses live market prices to simulate trades, but no real money is ever at risk. The portfolio exists only as a JSON file on your computer.
 
 ### How much does it cost to run?
-You need an OpenRouter API key with credits. A full daily pipeline run (all 5 stages + 3 associates = ~8 LLM calls) typically costs **$0.50–$2.00** depending on which models you use. The Economist using Perplexity Sonar has web search built-in, which may cost slightly more.
+You need an OpenRouter API key with credits. A full daily pipeline run (all 5 stages + 3 associates = ~8 LLM calls) typically costs **$0.03–$0.06** using default models. 
 
 ### Can I run just one stage?
 Yes. Use `python pipeline.py --stage analyst` to start from the Analyst stage (it loads the Economist and Researcher outputs from today's files). This is useful for debugging or iterating on a specific stage.
