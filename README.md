@@ -621,5 +621,5 @@ This project is for educational and research purposes. No real trading is perfor
 ---
 
 <p align="center">
-  <sub>Built with 🤖 by AI agents, for AI agents.</sub>
+  <sub>Built with 🤖 by AI agents, for humans and AI agents.</sub>
 </p>
