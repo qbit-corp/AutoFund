@@ -57,7 +57,7 @@ All of this runs with a single command.
                   └──────────────────────────────────────────────────────┘
 
                   ┌──────────────────────────────────────────────────────┐
-                  │              CONTINUOUS MONITORING                    │
+                  │              CONTINUOUS MONITORING                   │
                   │                                                      │
   Every 30 min    │   Monitor ──→ Check sell conditions on all positions │
                   │            ──→ Auto-sell if triggered & market open  │
