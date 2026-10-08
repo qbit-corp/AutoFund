@@ -45,21 +45,21 @@ All of this runs with a single command.
                   ┌──────────────────────────────────────────────────────┐
                   │              DAILY RESEARCH PIPELINE                 │
                   │                                                      │
-  08:00 ET        │   Economist ──→ Macro Briefing                       │
+                  │   Economist ──→ Macro Briefing                       │
                   │       ↓                                              │
-  08:30 ET        │   Researcher ──→ Opportunity Scan (Yahoo Finance)    │
+                  │   Researcher ──→ Opportunity Scan (Yahoo Finance)    │
                   │       ↓                                              │
-  09:00 ET        │   Analyst ──→ DCF · Technicals · Peer Comparison     │
+                  │   Analyst ──→ DCF · Technicals · Peer Comparison     │
                   │       ↓                                              │
-  10:00 ET        │   3 Associates ──→ Bull / Base / Bear Scenarios      │
+                  │   3 Associates ──→ Bull / Base / Bear Scenarios      │
                   │       ↓                                              │
-  11:00 ET        │   Manager ──→ BUY / SELL / HOLD + Sell Conditions    │
+                  │   Manager ──→ BUY / SELL / HOLD + Sell Conditions    │
                   └──────────────────────────────────────────────────────┘
 
                   ┌──────────────────────────────────────────────────────┐
                   │              CONTINUOUS MONITORING                    │
                   │                                                      │
-  Every 15 min    │   Monitor ──→ Check sell conditions on all positions │
+  Every 30 min    │   Monitor ──→ Check sell conditions on all positions │
                   │            ──→ Auto-sell if triggered & market open  │
                   └──────────────────────────────────────────────────────┘
 ```
